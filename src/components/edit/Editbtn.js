@@ -1,7 +1,7 @@
 import { Button, Modal } from "react-bootstrap";
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
-import { useSelector } from "react-redux/es/hooks/useSelector";
+
 import { useDispatch } from "react-redux";
 import { edits } from "../../redux/actions";
 

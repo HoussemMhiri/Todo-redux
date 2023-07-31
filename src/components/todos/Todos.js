@@ -4,13 +4,13 @@ import { useDispatch } from "react-redux";
 import { check, supp } from "../../redux/actions";
 import Editbtn from "../edit/Editbtn";
 const Todos = () => {
-  const { tasks } = useSelector((state) => state);
+  const { tasks,filtredTodos } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   return (
     <div className="todo-container">
       <ul className="todo-list">
-        {tasks.map((el) => (
+        {filtredTodos.map((el) => (
           <div key={el.id} className={`task ${el.done ? "check" : " "} todo`}>
             <li className="todo-item"> {el.task} </li>
 

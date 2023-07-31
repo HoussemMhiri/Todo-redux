@@ -16,7 +16,9 @@ const initState = {
       task: "Learn Js",
       done: false,
     },
-  ],
+  ], 
+
+  filtredTodos:[]
 };
 
 export const reducer = (state = initState, action) => {
@@ -48,6 +50,26 @@ export const reducer = (state = initState, action) => {
             : el
         ),
       };
+   /*  case actions.FILTERD:
+      return { ...state, filtredTodos: state.tasks.map(el=> el.done === true && action.payload === "completed" ? el.done === true : el.done === false && action.payload === "uncompleted" ? el.done === false : el )
+       
+      
+      }; */ 
+      case actions.COMP:
+        return {
+          ...state,filtredTodos: state.tasks.filter(el=> el.done === true)
+          
+        };
+      case actions.UNCOMP:
+        return {
+          ...state,filtredTodos: state.tasks.filter(el=> el.done === false)
+          
+        };
+      case actions.ALL:
+        return {
+          ...state,filtredTodos: state.tasks
+          
+        };
 
     default:
       return state;

@@ -37,3 +37,29 @@ export const edits = (id, inp) => {
     },
   };
 };
+/* export const filterd = (status) => {
+  return {
+    type: actions.FILTERD,
+     payload: status
+  };
+};
+ */ 
+
+export const comp = () => {
+  return {
+    type: actions.COMP, 
+   
+}; 
+}
+export const uncomp = () => {
+  return {
+    type: actions.UNCOMP,
+   
+}; 
+}
+export const all = () => {
+  return {
+    type: actions.ALL,
+   
+}; 
+}
